@@ -17,14 +17,6 @@
 <style>
 html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
 
-#marker {
-    background-image: url('cam.png');
-    background-size: cover;
-    width: 50px;
-    height: 56px;
-    border-radius: 0%;
-    cursor: pointer;
-}
 
 #map { position:relative; top:0; height: 500px; bottom:0; width:100%; }
 
@@ -42,7 +34,7 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
     <a class="w3-bar-item w3-button w3-right w3-hide-large w3-hover-white w3-large w3-theme-l1" href="javascript:void(0)" onclick="w3_open()"><i class="fa fa-bars"></i></a>
     <a href="#" class="w3-bar-item w3-button w3-theme-l1">Gates Cassava</a>
     <a href="#" class="w3-bar-item w3-button w3-hide-small w3-hover-white">About</a>
-    <a href="#" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Projects</a>
+    <a href="project_epidem.html" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Projects</a>
     <a href="#" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Strategy</a>
     <a href="#" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Contact</a>
   </div>
@@ -54,10 +46,6 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
 
 <!-- Main content: shift it to the right by 250 pixels when the sidebar is visible -->
 <div class="w3-main" style="margin-left:100px">
-
-
-
-
   <div class="w3-row w3-padding-64">
     <div class="w3-twothird w3-container">
 
@@ -127,9 +115,7 @@ map.on('load', function () {
                 "features": [{
                     "type": "Feature",
                     "properties": {
-                        "title" : "Epidemiology and Modelling - Cambridge",
                         "description": "<strong>Make it Mount Pleasant</strong><p><a href=\"http://www.mtpleasantdc.com/makeitmtpleasant\" target=\"_blank\" title=\"Opens in a new window\">Make it Mount Pleasant</a> is a handmade and vintage market and afternoon of live entertainment and kids activities. 12:00-6:00 p.m.</p>",
-                        "icon": "theatre"
                     },
                     "geometry": {
                         "type": "Point",
@@ -138,21 +124,27 @@ map.on('load', function () {
                 }, {
                     "type": "Feature",
                     "properties": {
-                        "title" : "Epidemiology and Modelling - Cambridge",
                         "description": "<strong>Mad Men Season Five Finale Watch Party</strong><p>Head to Lounge 201 (201 Massachusetts Avenue NE) Sunday for a <a href=\"http://madmens5finale.eventbrite.com/\" target=\"_blank\" title=\"Opens in a new window\">Mad Men Season Five Finale Watch Party</a>, complete with 60s costume contest, Mad Men trivia, and retro food and drink. 8:00-11:00 p.m. $10 general admission, $20 admission and two hour open bar.</p>",
-                        "icon": "theatre"
                     },
                     "geometry": {
                         "type": "Point",
                         "coordinates": [-77.003168, 38.894651]
+                    }
+                }, {
+                    "type": "Feature",
+                    "properties": {
+                        "description": "<a href=\"project_epidem.html\" target=\"_self\" title=\"Opens in a new window\"><strong>Epidemiology and Modelling</strong></a><p>Project based at University of Cambridge to understand and model the spread of cassava viruses and optimise management strategies.",
+                    },
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [0.114, 52.204]
                     }
                 }]
             }
         },
         "layout": {
             "icon-image": "marker-15",
-            "icon-size":1.5,
-            // "icon-color" : "#FF00FF",
+            "icon-size":1.2,
             "icon-allow-overlap": true
         }
     });
