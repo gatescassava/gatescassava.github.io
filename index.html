@@ -32,11 +32,11 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
 <div class="w3-top">
   <div class="w3-bar w3-theme w3-top w3-left-align w3-large">
     <a class="w3-bar-item w3-button w3-right w3-hide-large w3-hover-white w3-large w3-theme-l1" href="javascript:void(0)" onclick="w3_open()"><i class="fa fa-bars"></i></a>
-    <a href="#" class="w3-bar-item w3-button w3-theme-l1">Gates Cassava</a>
-    <a href="#" class="w3-bar-item w3-button w3-hide-small w3-hover-white">About</a>
-    <a href="project_epidem.html" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Projects</a>
-    <a href="#" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Strategy</a>
-    <a href="#" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Contact</a>
+    <a href="index.html" class="w3-bar-item w3-button w3-theme-l1">Gates Cassava</a>
+    <a href="about.html" class="w3-bar-item w3-button w3-hide-small w3-hover-white">About</a>
+    <a href="projects.html" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Projects</a>
+    <a href="strategy.html" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Strategy</a>
+    <a href="contact.html" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Contact</a>
   </div>
 </div>
 
@@ -95,8 +95,6 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
 
 mapboxgl.accessToken = 'pk.eyJ1IjoiZHNnMzgiLCJhIjoiY2lwaXNiOXlsMDA1NXZta3dxMDV3azQwYSJ9.XdVMSS9UIGCybRDzbsDMDQ';
 
-var monument = [32, 0];
-
 var map = new mapboxgl.Map({
     container: 'map',
     style: 'mapbox://styles/mapbox/light-v9',
@@ -112,34 +110,48 @@ map.on('load', function () {
             "type": "geojson",
             "data": {
                 "type": "FeatureCollection",
-                "features": [{
+                "features": [
+                  {
                     "type": "Feature",
                     "properties": {
-                        "description": "<strong>Make it Mount Pleasant</strong><p><a href=\"http://www.mtpleasantdc.com/makeitmtpleasant\" target=\"_blank\" title=\"Opens in a new window\">Make it Mount Pleasant</a> is a handmade and vintage market and afternoon of live entertainment and kids activities. 12:00-6:00 p.m.</p>",
+                        "description": "<a href=\"project_cdp.html\" target=\"_self\" title=\"Opens in a new window\"><strong>Cassava Diagnostics Project</strong></a><p>Project based at Mikocheni Agricultural Reasearch Institute, Tanzania. Coordinates cassava disease detection and surveillance across seven East and Southern African countries.",
                     },
                     "geometry": {
                         "type": "Point",
-                        "coordinates": monument
+                        "coordinates": [39.2, -6.76]
                     }
-                }, {
+                  },
+                  {
                     "type": "Feature",
                     "properties": {
-                        "description": "<strong>Mad Men Season Five Finale Watch Party</strong><p>Head to Lounge 201 (201 Massachusetts Avenue NE) Sunday for a <a href=\"http://madmens5finale.eventbrite.com/\" target=\"_blank\" title=\"Opens in a new window\">Mad Men Season Five Finale Watch Party</a>, complete with 60s costume contest, Mad Men trivia, and retro food and drink. 8:00-11:00 p.m. $10 general admission, $20 admission and two hour open bar.</p>",
+                        "description": "<a href=\"project_wave.html\" target=\"_self\" title=\"Opens in a new window\"><strong>West African Virus Epidemiology Project</strong></a><p>Project based at Universite Felix Hophouet Boigny, Cote d'Ivoire. Coordinates cassava disease detection and surveillance across seven West African countries.",
                     },
                     "geometry": {
                         "type": "Point",
-                        "coordinates": [-77.003168, 38.894651]
+                        "coordinates": [-5.21, 6.76]
                     }
-                }, {
+                  },
+                  {
                     "type": "Feature",
                     "properties": {
-                        "description": "<a href=\"project_epidem.html\" target=\"_self\" title=\"Opens in a new window\"><strong>Epidemiology and Modelling</strong></a><p>Project based at University of Cambridge to understand and model the spread of cassava viruses and optimise management strategies.",
+                        "description": "<a href=\"project_epidem.html\" target=\"_self\" title=\"Opens in a new window\"><strong>Epidemiology and Modelling</strong></a><p>Project based at University of Cambridge and Rothamsted Research to understand and model the spread of cassava viruses and optimise management strategies.",
                     },
                     "geometry": {
                         "type": "Point",
-                        "coordinates": [0.114, 52.204]
+                        "coordinates": [0, 52]
                     }
-                }]
+                  },
+                  {
+                    "type": "Feature",
+                    "properties": {
+                        "description": "<a href=\"project_nextgen.html\" target=\"_self\" title=\"Opens in a new window\"><strong>Next Gen Cassava</strong></a><p>Project based at Cornell University to significantly increase the rate of genetic improvement in cassava breeding and unlock the full potential of cassava.",
+                    },
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [-76.4, 42.45]
+                    }
+                  }
+                ]
             }
         },
         "layout": {
